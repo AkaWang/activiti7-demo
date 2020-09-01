@@ -1,0 +1,26 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: activiti7-demo
+  activiti:
+    database-schema-update: true
+    history-level: full
+    db-history-used: true
+    check-process-definitions: false # 自动部署验证设置:true-开启（默认）、false-关闭
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.14.15.127:3307/activiti
+    username: root
+    password: root
+  security:
+    user:
+      name: admin
+      password: admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
